@@ -355,79 +355,78 @@ dzx_radiobutton_checked_bg.xml
 
 
 //侧滑界面的控件
-	DrawerLayout drawer;// 筛选的抽屉布局
-	RadioGroup rg1;// 设施类型的radioGroup
-	RadioGroup rg2_1;// 经费预算的radioGroup的第一行
-	RadioGroup rg2_2;// 经费预算的radioGroup的第二行
-	RadioGroup rg3_1;// 项目总量的radioGroup的第一行
-	RadioGroup rg3_2;// 项目总量的radioGroup的第二行
-	RadioGroup rg4_1;// 项的开工时间的radioGroup的第一行
-	RadioGroup rg4_2;// 项目的开工时间的radioGroup的第二行
-	RadioButton rg1_rb1;// 桥梁
-	RadioButton rg1_rb2;// 道路
-	RadioButton rg2_rb1;// 10万以内
-	RadioButton rg2_rb2;// 10-20万元
-	RadioButton rg2_rb3;// 20-50万元
-	RadioButton rg2_rb4;// 50-100万元
-	RadioButton rg2_rb5;// 100万元以上
-	RadioButton rg3_rb1;// 1千平方米以内
-	RadioButton rg3_rb2;// 1-5千平方米
-	RadioButton rg3_rb3;// 5千-1万平方米
-	RadioButton rg3_rb4;// 1万平方米以上
-	TextView startTime;// 筛选界面的开始时间
-	TextView endTime;// 筛选界面的结束时间
-  Map<String, String> condition_map;// 存放筛选界面的条件的map
+DrawerLayout drawer;// 筛选的抽屉布局
+RadioGroup rg1;// 设施类型的radioGroup
+RadioGroup rg2_1;// 经费预算的radioGroup的第一行
+RadioGroup rg2_2;// 经费预算的radioGroup的第二行
+RadioGroup rg3_1;// 项目总量的radioGroup的第一行
+RadioGroup rg3_2;// 项目总量的radioGroup的第二行
+RadioGroup rg4_1;// 项的开工时间的radioGroup的第一行
+RadioGroup rg4_2;// 项目的开工时间的radioGroup的第二行
+RadioButton rg1_rb1;// 桥梁
+RadioButton rg1_rb2;// 道路
+RadioButton rg2_rb1;// 10万以内
+RadioButton rg2_rb2;// 10-20万元
+RadioButton rg2_rb3;// 20-50万元
+RadioButton rg2_rb4;// 50-100万元
+RadioButton rg2_rb5;// 100万元以上
+RadioButton rg3_rb1;// 1千平方米以内
+RadioButton rg3_rb2;// 1-5千平方米
+RadioButton rg3_rb3;// 5千-1万平方米
+RadioButton rg3_rb4;// 1万平方米以上
+TextView startTime;// 筛选界面的开始时间
+TextView endTime;// 筛选界面的结束时间
+Map<String, String> condition_map;// 存放筛选界面的条件的map
     
- // 初始化radioButton，radioGroup和condition_map的方法
-	private void initRadioView() {
-		rg1 = (RadioGroup) findViewById(R.id.rg1);
-		rg2_1 = (RadioGroup) findViewById(R.id.rg2_1);
-		rg2_2 = (RadioGroup) findViewById(R.id.rg2_2);
-		rg3_1 = (RadioGroup) findViewById(R.id.rg3_1);
-		rg3_2 = (RadioGroup) findViewById(R.id.rg3_2);
-		rg1_rb1 = (RadioButton) findViewById(R.id.rg1_rb1);
-		rg1_rb1.setOnClickListener(this);
-		rg1_rb2 = (RadioButton) findViewById(R.id.rg1_rb2);
-		rg1_rb2.setOnClickListener(this);
-		rg2_rb1 = (RadioButton) findViewById(R.id.rg2_rb1);
-		rg2_rb1.setOnClickListener(this);
-		rg2_rb2 = (RadioButton) findViewById(R.id.rg2_rb2);
-		rg2_rb2.setOnClickListener(this);
-		rg2_rb3 = (RadioButton) findViewById(R.id.rg2_rb3);
-		rg2_rb3.setOnClickListener(this);
-		rg2_rb4 = (RadioButton) findViewById(R.id.rg2_rb4);
-		rg2_rb4.setOnClickListener(this);
-		rg2_rb5 = (RadioButton) findViewById(R.id.rg2_rb5);
-		rg2_rb5.setOnClickListener(this);
-		rg3_rb1 = (RadioButton) findViewById(R.id.rg3_rb1);
-		rg3_rb1.setOnClickListener(this);
-		rg3_rb2 = (RadioButton) findViewById(R.id.rg3_rb2);
-		rg3_rb2.setOnClickListener(this);
-		rg3_rb3 = (RadioButton) findViewById(R.id.rg3_rb3);
-		rg3_rb3.setOnClickListener(this);
-		rg3_rb4 = (RadioButton) findViewById(R.id.rg3_rb4);
-		rg3_rb4.setOnClickListener(this);
-		startTime = (TextView) findViewById(R.id.startTime_dzxMain);
-		startTime.setOnClickListener(this);
-		endTime = (TextView) findViewById(R.id.endTime_dzxMain);
-		endTime.setOnClickListener(this);
-		condition_map = new HashMap<String, String>();
-		condition_map.put("faceType", "");
-		condition_map.put("money", "");
-		condition_map.put("totalNum", "");
-		condition_map.put("startTime", "");
-		condition_map.put("endTime", "");
+// 初始化radioButton，radioGroup和condition_map的方法
+private void initRadioView() {
+rg1 = (RadioGroup) findViewById(R.id.rg1);
+rg2_1 = (RadioGroup) findViewById(R.id.rg2_1);
+rg2_2 = (RadioGroup) findViewById(R.id.rg2_2);
+rg3_1 = (RadioGroup) findViewById(R.id.rg3_1);
+rg3_2 = (RadioGroup) findViewById(R.id.rg3_2);
+rg1_rb1 = (RadioButton) findViewById(R.id.rg1_rb1);
+rg1_rb1.setOnClickListener(this);
+rg1_rb2 = (RadioButton) findViewById(R.id.rg1_rb2);
+rg1_rb2.setOnClickListener(this);
+rg2_rb1 = (RadioButton) findViewById(R.id.rg2_rb1);
+rg2_rb1.setOnClickListener(this);
+rg2_rb2 = (RadioButton) findViewById(R.id.rg2_rb2);
+rg2_rb2.setOnClickListener(this);
+rg2_rb3 = (RadioButton) findViewById(R.id.rg2_rb3);
+rg2_rb3.setOnClickListener(this);
+rg2_rb4 = (RadioButton) findViewById(R.id.rg2_rb4);
+rg2_rb4.setOnClickListener(this);
+rg2_rb5 = (RadioButton) findViewById(R.id.rg2_rb5);
+rg2_rb5.setOnClickListener(this);
+rg3_rb1 = (RadioButton) findViewById(R.id.rg3_rb1);
+rg3_rb1.setOnClickListener(this);
+rg3_rb2 = (RadioButton) findViewById(R.id.rg3_rb2);
+rg3_rb2.setOnClickListener(this);
+rg3_rb3 = (RadioButton) findViewById(R.id.rg3_rb3);
+rg3_rb3.setOnClickListener(this);
+rg3_rb4 = (RadioButton) findViewById(R.id.rg3_rb4);
+rg3_rb4.setOnClickListener(this);
+startTime = (TextView) findViewById(R.id.startTime_dzxMain);
+startTime.setOnClickListener(this);
+endTime = (TextView) findViewById(R.id.endTime_dzxMain);
+endTime.setOnClickListener(this);
+condition_map = new HashMap<String, String>();
+condition_map.put("faceType", "");
+condition_map.put("money", "");
+condition_map.put("totalNum", "");
+condition_map.put("startTime", "");
+condition_map.put("endTime", "");
 	}
-
-  // radioGroup和radioButton的点击方法,当他们被点击时为condition_map设置值
-	@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		switch (v.getId()) {
-		case R.id.rg1_rb1:
-			condition_map.put("faceType", "B03");
-			break;
-		case R.id.rg1_rb2:
+// radioGroup和radioButton的点击方法,当他们被点击时为condition_map设置值
+@Override
+public void onClick(View v) {
+// TODO Auto-generated method stub
+switch (v.getId()) {
+    case R.id.rg1_rb1:
+	condition_map.put("faceType", "B03");
+	break;
+	case R.id.rg1_rb2:
 			condition_map.put("faceType", "B01");
 			break;
 		case R.id.rg2_rb1:
